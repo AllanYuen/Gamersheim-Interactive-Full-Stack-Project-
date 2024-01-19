@@ -1,13 +1,34 @@
-// genresseeds.js
-const { Genre } = require('../models');
+// Import necessary modules
+const { Genres } = require('../models');
 
-const genresData = [
-  // Your genre seed data
-  // Example: { name: 'Action' }
+// Seed data for the Genres table
+const genreSeedData = [
+  {
+    GenreName: 'Action',
+  },
+  {
+    GenreName: 'Adventure',
+  },
+  {
+    GenreName: 'RPG',
+  },
+  // Add more genres as needed
 ];
 
-const seed = async () => {
-  await Genre.bulkCreate(genresData);
+// Function to seed the Genres table
+const seedGenres = async () => {
+  try {
+    // Sync the model
+    await sequelize.sync({ force: true });
+
+    // Create records in the Genres table
+    await Genres.bulkCreate(genreSeedData);
+
+    console.log('Genres seeded successfully');
+  } catch (err) {
+    console.error('Error seeding genres:', err);
+  }
 };
 
-module.exports = { seed };
+// Call the seed function
+seedGenres();

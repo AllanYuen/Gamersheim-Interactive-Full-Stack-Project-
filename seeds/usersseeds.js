@@ -1,13 +1,39 @@
-// usersseeds.js
-const { User } = require('../models');
+// Import necessary modules
+const { Users } = require('../models');
 
-const usersData = [
-  // Your user seed data
-  // Example: { username: 'user1', email: 'user1@example.com', password: 'password1' }
+// Seed data for the Users table
+const usersSeedData = [
+  {
+    UserName: 'user1',
+    FirstName: 'John',
+    LastName: 'Doe',
+    Email: 'user1@example.com',
+    PasswordSalt: 'sample_salt_1',
+  },
+  {
+    UserName: 'user2',
+    FirstName: 'Jane',
+    LastName: 'Doe',
+    Email: 'user2@example.com',
+    PasswordSalt: 'sample_salt_2',
+  },
+  // Add more user data as needed
 ];
 
-const seed = async () => {
-  await User.bulkCreate(usersData);
+// Function to seed the Users table
+const seedUsers = async () => {
+  try {
+    // Sync the model
+    await sequelize.sync({ force: true });
+
+    // Create records in the Users table
+    await Users.bulkCreate(usersSeedData);
+
+    console.log('Users seeded successfully');
+  } catch (err) {
+    console.error('Error seeding Users:', err);
+  }
 };
 
-module.exports = { seed };
+// Call the seed function
+seedUsers();
