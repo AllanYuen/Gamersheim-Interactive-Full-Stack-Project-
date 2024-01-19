@@ -1,30 +1,31 @@
-// index.js
-const { sequelize } = require('../models');
+// Import necessary modules
+const sequelize = require('../config/connection');
 require('dotenv').config();
 
 // Import seed files
-const gamesSeeder = require('./gamesseeds');
-const genresSeeder = require('./genresseeds');
-const platformsSeeder = require('./platformsseeds');
-const usersLibrarySeeder = require('./userslibraryseeds');
-const usersSeeder = require('./usersseeds');
+const seedGames = require('./gamesseeds');
+const seedGenres = require('./genresseeds');
+const seedPlatforms = require('./platformsseeds');
+const seedUsersLibrary = require('./userslibraryseeds');
+const seedUsers = require('./usersseeds');
 
-// Seed the database
+// Function to seed all tables
 const seedAll = async () => {
     await sequelize.sync({ force: true }); // This will drop and recreate tables, use with caution
     console.log('\n----- DATABASE SYNCED -----\n');
-    await gamesSeeder();
+    await seedGames();
     console.log('\n----- games SEEDED -----\n');
-    await genresSeeder();
+    await seedGenres();
     console.log('\n----- genres SEEDED -----\n');
-    await platformsSeeder();
+    await seedPlatforms();
     console.log('\n----- platforms SEEDED -----\n');
-    await usersLibrarySeeder();
-    console.log('\n----- usersLibrary SEEDED -----\n');    
-    await usersSeeder();
+    await seedUsersLibrary();
+    console.log('\n----- users_Library SEEDED -----\n');    
+    await seedUsers();
     console.log('\n----- users SEEDED -----\n');   
 
     process.exit(0);
 };
 
+// Call the seedAll function
 seedAll();
