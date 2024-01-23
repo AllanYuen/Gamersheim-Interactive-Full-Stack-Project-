@@ -4,14 +4,61 @@ const { Platform } = require('../models');
 // Seed data for the Platform table
 const platformSeedData = [
   {
-    Platform: 'PC',
+    id:'1',
+    platform_name: 'Playstation 2',
   },
   {
-    Platform: 'PlayStation',
+    id:'2',
+    genre_name: 'Playstation 3',
   },
   {
-    Platform: 'Xbox',
+    id:'3',
+    genre_name: 'Playstation 4',
   },
+  {
+    id:'4',
+    genre_name: 'Playstation 5',
+  },
+  {
+    id:'5',
+    genre_name: 'XBox',
+  },
+  {
+    id:'6',
+    genre_name: 'XBox 360',
+  },
+  {
+    id:'7',
+    genre_name: 'XBox One',
+  },
+  {
+    id:'8',
+    genre_name: 'XBox Series X',
+  },
+  {
+    id:'9',
+    genre_name: 'PC',
+  },
+  {
+    id:'10',
+    genre_name: 'Nintendo Switch',
+  },
+  {
+    id:'11',
+    genre_name: 'Android',
+  },
+  {
+    id:'12',
+    genre_name: 'Apple',
+  },
+  {
+    id:'13',
+    genre_name: 'Retro Console',
+  },
+  {
+    id:'14',
+    genre_name: 'other',
+  }
   // Add more platforms as needed
 ];
 
