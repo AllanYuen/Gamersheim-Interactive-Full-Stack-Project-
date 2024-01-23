@@ -4,12 +4,11 @@ const { Users_Library } = require('../models');
 // Seed data for the Users_Library table
 const usersLibrarySeedData = [
   {
-    UserID: 1, // Replace with an actual UserID from the 'users' table
-    GameID: 1, // Replace with an actual GameID from the 'games' table
-  },
-  {
-    UserID: 2, // Replace with another actual UserID
-    GameID: 2, // Replace with another actual GameID
+    id: '',
+    user_id: '',
+    game_id: '',
+    platform_id: '',
+    played: '',
   },
   // Add more entries as needed
 ];
