@@ -5,34 +5,46 @@ class Users_Library extends Model {}
 
 Users_Library.init(
     {
-        LibraryID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
+      library_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'users',
+          key: 'user_id',
           },
-          UserID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-              model: 'users',
-              key: 'UserID',
-            },
+      },
+      game_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'games',
+          key: 'game_id',
           },
-          GameID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-              model: 'games',
-              key: 'GameID',
-            },
-          },
+      },
+      platform_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      played: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        },
+        
+        
     },
     {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'users_library',
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'users_library',
       }
 );

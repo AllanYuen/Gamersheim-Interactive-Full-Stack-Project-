@@ -5,38 +5,39 @@ class Users extends Model {}
 
 Users.init(
     {
-        UserID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-          },
-          UserName: {
-            type: DataTypes.STRING,
-            allowNull: false,
-          },
-          FirstName: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
-          LastName: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
-          Email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-          },
-          PasswordSalt: {
-            type: DataTypes.STRING,
-            allowNull: false,
-          },
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      user_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      first_name: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      last_name: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {len: [8],},
+      },
     },
     {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'users',
-      }
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'users',
+    }
 );
