@@ -4,7 +4,7 @@ const { Users_Library } = require('../models');
 // Seed data for the Users_Library table
 const usersLibrarySeedData = [
   {
-    id: '',
+    library_id: '',
     user_id: '',
     game_id: '',
     platform_id: '',
