@@ -5,7 +5,6 @@ const homeRoute = require('./homeroutes.js');
 
 
 router.use('/homeroute', homeRoute);
-router.use('/dashboardroute', dashboardRoute);
 router.use('/api', apiRoutes);
 router.use('/authentication', authenticationRoutes);
 
