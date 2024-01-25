@@ -5,56 +5,47 @@ class Games extends Model {}
 
 Games.init(
     {
-        GameID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-          },
-          Title: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
-          GenreID: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-              model: 'Genres',
-              key: 'GenreID',
-            },
-          },
-          Publisher: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
-          PlatformID: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-              model: 'Platforms',
-              key: 'PlatformID',
-            },
-          },
-          ReleaseYear: {
-            type: DataTypes.DATE,
-            allowNull: false,
-          },
-          GameDescription: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
-          Features: {
-            type: DataTypes.STRING,
-            allowNull: true,
-          },
-          CoverImage: {
-            type: DataTypes.JSONB,
-            allowNull: true,
-          },
-          Trailer: {
-            type: DataTypes.JSONB,
-            allowNull: true,
-          },
+      game_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      genre_id: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      publisher: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      platform_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      release_year: {
+        type: DataTypes.INTEGER,
+      },
+      game_description: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      features: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      cover_image: {
+        type: DataTypes.JSONB,
+        allowNull: true,
+      },
+      trailer: {
+        type: DataTypes.JSONB,
+        allowNull: true,
+      },
     },
     {
         sequelize,
