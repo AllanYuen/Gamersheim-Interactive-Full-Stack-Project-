@@ -22,5 +22,7 @@ Platform.init(
       freezeTableName: true,
       underscored: true,
       modelName: 'platform',
-    }
+    },
 );
+
+module.exports = Platform

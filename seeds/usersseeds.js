@@ -4,7 +4,7 @@ const { Users } = require('../models');
 // Seed data for the Users table
 const usersSeedData = [
   {
-    user_id: '1',
+    user_id: 1,
     user_name: 'OzdalDogru',
     first_name: 'Ozdal',
     last_name: 'Dogru',
@@ -12,7 +12,7 @@ const usersSeedData = [
     password: 'password1',
   },
   {
-    user_id: '2',
+    user_id: 2,
     user_name: 'AllanYuen',
     first_name: 'Allan',
     last_name: 'Yuen',
@@ -20,7 +20,7 @@ const usersSeedData = [
     password: 'password2',
   },
   {
-    user_id: '3',
+    user_id: 3,
     user_name: 'MatthewBeaubien',
     first_name: 'Matthew',
     last_name: 'Beaubien',
@@ -28,7 +28,7 @@ const usersSeedData = [
     password: 'password3',
   },
   {
-    user_id: '4',
+    user_id: 4,
     user_name: 'CharlotteMarchildon',
     first_name: 'Charlotte',
     last_name: 'Marchildon',
@@ -36,30 +36,15 @@ const usersSeedData = [
     password: 'password4',
   },
   {
-    user_id: '5',
+    user_id: 5,
     user_name: 'JustinLee',
     first_name: 'Justin',
     last_name: 'Lee',
     email: 'JustinLee@email.com',
     password: 'password5',
   },
-  // Add more user data as needed
 ];
 
-// Function to seed the Users table
-const seedUsers = async () => {
-  try {
-    // Sync the model
-    await sequelize.sync({ force: true });
+const seedUsers = () => Users.bulkCreate(usersSeedData);
 
-    // Create records in the Users table
-    await Users.bulkCreate(usersSeedData);
-
-    console.log('Users seeded successfully');
-  } catch (err) {
-    console.error('Error seeding Users:', err);
-  }
-};
-
-// Call the seed function
-seedUsers();
+module.exports = seedUsers;

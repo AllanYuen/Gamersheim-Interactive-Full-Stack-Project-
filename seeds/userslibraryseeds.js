@@ -1,32 +1,19 @@
 // Import necessary modules
-const { Users_Library } = require('../models');
+const { UserLibrary } = require('../models');
 
 // Seed data for the Users_Library table
 const usersLibrarySeedData = [
   {
-    library_id: '',
-    user_id: '',
-    game_id: '',
-    platform_id: '',
-    played: '',
+    library_id: 1,
+    user_id: 1,
+    game_id: 1,
+    platform_id: 1,
+    played: 'true',
   },
   // Add more entries as needed
 ];
 
-// Function to seed the Users_Library table
-const seedUsersLibrary = async () => {
-  try {
-    // Sync the model
-    await sequelize.sync({ force: true });
 
-    // Create records in the Users_Library table
-    await Users_Library.bulkCreate(usersLibrarySeedData);
+const seedLibrary = () => UserLibrary.bulkCreate(usersLibrarySeedData);
 
-    console.log('Users_Library seeded successfully');
-  } catch (err) {
-    console.error('Error seeding Users_Library:', err);
-  }
-};
-
-// Call the seed function
-seedUsersLibrary();
+module.exports = seedLibrary;

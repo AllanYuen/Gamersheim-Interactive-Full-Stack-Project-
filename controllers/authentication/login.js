@@ -4,18 +4,12 @@ const { Users } = require('../../models');
 router.post('/', async (req, res) => {
   try {
       const userCheck = await Users.findOne({ where: {user_name:  req.body.user_name}});
-    if (!userCheck) {
-      res.status(400).json({ message: 'Incorrect user name, please try again' });
-      return;
-    }
+    if (!userCheck) {res.status(400).json({ message: 'Incorrect user name, please try again' });return;}
 
 
 const validPassword = await userCheck.checkPw(req.body.password);
 
-    if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password, please try again' });
-      return;
-    }
+    if (!validPassword) {res.status(400).json({ message: 'Incorrect password, please try again' });return;}
 
     req.session.save(() => {
       req.session.user_id = userCheck.id;
@@ -25,8 +19,8 @@ const validPassword = await userCheck.checkPw(req.body.password);
     });
     
 
-  } catch (error) {
-    res.status(500).json(error);console.log(error)}
+  } 
+  catch (error) {res.status(500).json(error);console.log(error)}
 });
 
 
