@@ -11,7 +11,7 @@ Comments.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      author: {
+      user_name: {
         type: DataTypes.STRING,
         allowNull: false,
         references: {
