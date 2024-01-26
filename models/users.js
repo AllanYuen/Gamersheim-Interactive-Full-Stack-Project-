@@ -41,3 +41,5 @@ Users.init(
       modelName: 'users',
     }
 );
+
+module.exports = Users

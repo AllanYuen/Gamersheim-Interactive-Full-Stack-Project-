@@ -1,15 +1,18 @@
 const Games = require('./games');
 const Genres = require('./genres');
 const Platforms = require('./platform');
-const UserLibrary = require('./users_library');
+const UserLibrary = require('./userslibrary');
 const Users = require('./users');
 
 
+//Games.hasMany(Genres, {foreignKey: 'genre_id',onDelete: 'CASCADE',});
+//Genres.belongsTo(Games, {foreignKey: 'genre_id',});
 
+//Platforms.hasMany(Games, {foreignKey: 'platform_id',onDelete: 'CASCADE',});
+//Games.belongsTo(Platforms, {foreignKey: 'platform_id',});
 
-Games.hasMany(Genres, {foreignKey: 'GenreID',onDelete: 'CASCADE',});
-Genres.belongsTo(Games, {foreignKey: 'GenreID',});
-
+//UserLibrary.hasMany(Users, {foreignKey: 'library_id',onDelete: 'CASCADE',});
+//Users.belongsTo(UserLibrary, {foreignKey: 'library_id',});
 
 
 

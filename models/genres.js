@@ -13,7 +13,7 @@ Genres.init(
       },
       genre_name: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
       },
     },
     {
@@ -24,3 +24,5 @@ Genres.init(
         modelName: 'genres',
       }
 );
+
+module.exports = Genres

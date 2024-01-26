@@ -16,7 +16,7 @@ Games.init(
         allowNull: false,
       },
       genre_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       publisher: {
@@ -39,11 +39,11 @@ Games.init(
         allowNull: true,
       },
       cover_image: {
-        type: DataTypes.JSONB,
+        type: DataTypes.STRING,
         allowNull: true,
       },
       trailer: {
-        type: DataTypes.JSONB,
+        type: DataTypes.STRING,
         allowNull: true,
       },
     },
@@ -55,3 +55,5 @@ Games.init(
         modelName: 'games',
       }
 );
+
+module.exports = Games
