@@ -250,7 +250,3 @@ Heroku Deployment link:
 ---
 © 2024 Gamersheim-Interactive-Full-Stack-Project- by Project 2 Group 3. All Rights Reserved.
 
-
-Heroku Deployment link:
-
----
