@@ -5,7 +5,6 @@ const { Comments } = require('../models');
 const commentsSeedData = [
   {
       user_name: 'OzdalDogru',
-      rating: 5 ,
       message: 'This is the best video game ever',
       comment_date: '25.01.2024',
       game_id: 1

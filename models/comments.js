@@ -19,10 +19,6 @@ Comments.init(
           key: 'user_name',
           },
       },
-      rating: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
       message: {
         type: DataTypes.STRING,
         allowNull: false,
