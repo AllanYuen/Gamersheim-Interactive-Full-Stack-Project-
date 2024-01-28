@@ -226,7 +226,7 @@ For details click on the following link to go to the "LICENSE" file:
 ## Presentation
 
 Group 3 Presentation of Project: 
-[Powerpoint](https://docs.google.com/presentation/d/1ZsIhdhDAGaGDt26DzNYWIajbtkND_A5P/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
+[Powerpoint](https://docs.google.com/presentation/d/1jiPucugeZsPbx-eE6Us_RyA-Q8VkY2-t/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
 
 to address the following: 
 * `Elevator pitch` A one-minute description of your application.
