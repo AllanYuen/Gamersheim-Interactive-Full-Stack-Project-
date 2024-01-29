@@ -19,9 +19,7 @@ router.get('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const userData = await User.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
+      where: {id: req.params.user_id, },
     });
     if (!userData[0]) {
       res.status(404).json({ message: 'No user found!' });
@@ -37,9 +35,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const userData = await User.destroy({
-      where: {
-        id: req.params.id,
-      },
+      where: {id: req.params.user_id,},
     });
     if (!userData) {
       res.status(404).json({ message: 'No user found!' });
