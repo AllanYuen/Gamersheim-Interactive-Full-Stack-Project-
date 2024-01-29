@@ -1,0 +1,22 @@
+
+<h2>Comments List</h2>
+
+
+<table class="table-comments">
+<thead>
+    <tr>
+        <th>Game Title</th>
+        <th>Comment</th>
+    </tr>
+</thead>
+
+<tbody>
+    {{#each comments}}
+    <tr>
+        <td>{{comments.title}}</td>
+        <td>{{comments.message}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+
+</table>

@@ -14,3 +14,31 @@
         
     </p>
 </div>
+
+----alternate way-----
+<h2>Games List</h2>
+
+
+<table class="table-games">
+<thead>
+    <tr>
+        <th>Game Title</th>
+        <th>Description</th>
+        <th>Publisher</th>   
+        <th>Release Year</th>       
+    </tr>
+</thead>
+
+<tbody>
+    {{#each genres}}
+    <tr>
+        <td>{{game.title}}</td>
+        <td>{{game.description}}</td>
+        <td>{{game.publisher}}</td>
+        <td>{{game.release_year}}</td>
+                                
+    </tr>
+    {{/each}}
+</tbody>
+
+</table>
