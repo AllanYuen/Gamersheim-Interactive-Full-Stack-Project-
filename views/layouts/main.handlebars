@@ -31,7 +31,9 @@
 
     <div>
         <!--main-->
-        {{featured games}}
+        {{!-- {{featured games}} --}}
+        {{!-- Replacement of {{featured games}} to support handlebar files to be served up --}}
+        {{{body}}}
     </div>
     <div>
         <!--explore/signup-->
@@ -46,11 +48,12 @@
             <button> Sign-up </button>
         </a>
     </div>
-    <div>
+    {{!-- Removed below as only one object can be loaded --}}
+    {{!-- <div>
         <!--explore section-->
         {{Upcoming}}
 
-    </div>
+    </div> --}}
 
     <footer>
 

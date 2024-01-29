@@ -20,7 +20,7 @@ router.get('/Games/:id', async (req, res) => {
             return;
         }
         const game = gamesData.get({ plain: true });
-        res.render('game', game);
+        res.render('games', game);
         res.status(200).json(gamesData);
     } catch (err) {
         res.status(500).json(err);
