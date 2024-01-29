@@ -28,30 +28,14 @@
 ### As a full-stack web developer
 * `Empowering Gaming Enthusiasts` </div>
   Provide an immersive full-stack game platform for gaming enthusiasts to effortlessly discover, play, and organize their favorite games.
-* `Showcasing Seamless User Experience`
-  </div> Demonstrate the project's commitment to an intuitive user interface, ensuring easy navigation, enhanced usability, and responsiveness across various devices and screen sizes.
-* `Highlighting Rich Game Collection`
-  </div> Serve as a focal point in the portfolio by offering an extensive game collection categorized by genres. Include relevant information such as genre, release date, and brief descriptions for effortless exploration.
-* `Integrating External APIs for Enriched Experience`
-  </div> Seamlessly fetch and display game details using integrated APIs for trailers, screenshots, and reviews. Enhance the gaming experience by integrating with external platforms.
-* `Engaging Users with Interactive Features`
-  </div> Provide an interactive experience with game trailers, featuring auto play, full-screen mode, and options to comment or share trailers.
-* `Enhancing Search and Recommendation System`
-  </div> Design a search box with autocomplete functionality. Incorporate a drop-down box with suggested games based on user preferences and trends.
+* `Integrating Internal APIs for Enriched Experience`
+  </div> Seamlessly fetch and display game details using internal APIs for trailers, screenshots, and reviews. Enhance the gaming experience by integrating with internal platforms.
 * `Enabling Personalization with Favorite Games`
   </div> Allow users to create and manage a personalized list of favorite games. Implement local storage for saving and retrieving user-selected favorites.
 * `Ensuring Secure User Authentication`
   </div> Implement a secure user authentication system with encrypted passwords. Enable users to create accounts, log in, and manage profiles securely.
-* `Facilitating Social Engagement`
-  </div> Enable social media sharing options for game-related activities and achievements.
 * `Implementing Feedback and Rating System`
   </div> Create a user feedback and rating system for games, displaying average ratings and reviews to assist users in making informed decisions.
-* `Cultivating Multiplayer Engagement`
-  </div> Incorporate features for multiplayer engagement, including connecting with friends, joining gaming communities, and participating in multiplayer games.
-* `Promptly Notifying Users of Updates and Events`
-  </div> Implement a notification system for new game releases, updates, and events.
-* `Building a Robust Backend for Performance`
-  </div> Develop a robust backend system efficiently handling user requests, updating the game database, and ensuring overall platform performance and scalability.
   
 </div>
 </div>
@@ -94,10 +78,6 @@ WHEN a user views game details
 THEN the platform should seamlessly fetch and display information using integrated APIs for
 trailers, screenshots, and reviews, ensuring a rich gaming experience across external platforms.
 
-WHEN a user engages with game trailers
-THEN they should have an interactive experience with features such as auto play, full-screen mode,
-and options to comment or share trailers.
-
 WHEN a user searches for games
 THEN the platform should provide autocomplete functionality and offer game recommendations as users
 type, incorporating a drop-down box with suggestions based on preferences and trends.
@@ -110,19 +90,9 @@ WHEN a user interacts with user authentication
 THEN the system should securely allow account creation, login, and profile management with encrypted
 passwords and secure storage of user information.
 
-WHEN a user wants to share achievements
-THEN the platform should enable social media sharing options for favorite games on various platforms.
-
 WHEN a user provides feedback
 THEN the platform should facilitate a user feedback and rating system for games, displaying average
 ratings and reviews to assist users in making informed decisions.
-
-WHEN a user desires multiplayer engagement
-THEN the platform should incorporate features to connect with friends, join gaming communities, and
-participate in multiplayer games.
-
-WHEN there are updates or events related to favorite games
-THEN the platform should implement a notification system to inform users promptly.
 
 WHEN a user interacts with the backend
 THEN the platform should have a robust backend system efficiently handling user requests, updating
@@ -135,7 +105,6 @@ Please follow these steps to install, refer to, contribute, or reflect our proje
 
 1. Clone -or- Fork the repository
 2. Run the below in console install necessary packages
-
 ```
 npm i
 ```
@@ -160,8 +129,8 @@ npm run seed
 node server.js
 ```
 
-GAMERSHEIM is deployed VIA Heroku </div>
-<a href="https://polar-journey-77005-c598f31c0871.herokuapp.com/"> HEROKU </a>
+GAMERSHEIM is deployed VIA following link </div>
+<a href="https://polar-journey-77005-c598f31c0871.herokuapp.com/"> GAMERSHEIM </a>
 
 
 ## Technology-Used
@@ -226,7 +195,7 @@ For details click on the following link to go to the "LICENSE" file:
 ## Presentation
 
 Group 3 Presentation of Project: 
-[Powerpoint](https://docs.google.com/presentation/d/1jiPucugeZsPbx-eE6Us_RyA-Q8VkY2-t/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
+[Powerpoint](https://docs.google.com/presentation/d/1m8necGq-oQANwZBUC1rnRNlnMis239FC/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
 
 to address the following: 
 * `Elevator pitch` A one-minute description of your application.
@@ -248,5 +217,5 @@ Github Deployment link:
 Heroku Deployment link:
 
 ---
-© 2024 Gamersheim-Interactive-Full-Stack-Project- by Project 2 Group 3. All Rights Reserved.
+© 2024 "Gamersheim-Interactive-Full-Stack-Project" by `Project 2` `Group 3`. All Rights Reserved.
 
