@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const path = require('path');
 const Comments = require('../../models/comments');
 const withAuth = require('../../utils/auth');
 
@@ -25,7 +24,7 @@ router.get('/', isAuth, (req,res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Comments.findByPk({where: {id: req.params.comments_id}})
+    Comments.findByPk({where: {id: req.params.id}})
         .then(comments => res.json(comments))
         .catch(err => {
             console.log(err);
@@ -37,7 +36,7 @@ router.post('/', async (req, res) => {
   try {
     const newComment = await Comments.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: req.session.id,
     });
     res.json(newComment);
   } catch (err) {
@@ -50,7 +49,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     const commentData = await Comments.destroy({
       where: {
         comment_id: req.params.id,
-        game_id: req.session.game_id,
+        game_id: req.session.id,
       },
     });
     if (!commentData) {

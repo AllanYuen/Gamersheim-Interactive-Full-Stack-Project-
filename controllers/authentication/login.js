@@ -21,7 +21,7 @@ router.post('./views/login', async (req, res) => {
     if (!validPassword) {res.status(400).json({ message: 'Incorrect password, please try again' });return;}
 
     req.session.save(() => {
-    req.session.user_id = userCheck.id;
+    req.session.id = userCheck.id;
     req.session.logged_in = true;
       
     res.json({ user: userCheck, message: `You're logged in`})

@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const path = require('path');
 const Platforms = require('../../models/platform');
 
 // This is the route to get all platforms
@@ -14,7 +13,7 @@ router.get('/', async (req, res) => {
 // This is the route to get a single platform
 router.get('/Platform/:id', async (req, res) => {
     try{
-        const platformData = await Platforms.findByPk(req.params.platform_id);
+        const platformData = await Platforms.findByPk(req.params.id);
         if(!platformData){
             res.status(404).json({message: 'No platform found with this ID!'});
             return;
