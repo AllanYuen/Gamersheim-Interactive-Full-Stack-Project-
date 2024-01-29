@@ -33,3 +33,23 @@
         </div>
     {{/each}}
 </div>
+
+--------- alternate way ------------
+
+
+<table class="table-genres">
+<thead>
+    <tr>
+        <th>Genre Name</th>
+    </tr>
+</thead>
+
+<tbody>
+    {{#each genres}}
+    <tr>
+        <td>{{genre.genre_name}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+
+</table>

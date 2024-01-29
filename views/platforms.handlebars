@@ -22,3 +22,23 @@
             </a>
         </div>
 </div>
+
+
+--------- alternate way ------------
+
+<table class="table-genres">
+<thead>
+    <tr>
+        <th>Platform Name</th>
+    </tr>
+</thead>
+
+<tbody>
+    {{#each platforms}}
+    <tr>
+        <td>{{platforms.platform_name}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+
+</table>
