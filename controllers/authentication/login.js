@@ -1,17 +1,20 @@
 const router = require('express').Router();
+const express = require('express')
 const app = express ()
 const { Users } = require('../../models');
-const bcrypt = require (bcrypt)
+const bcrypt = require ('bcrypt')
+
+
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended : false}))
 
 app.get('./views/login', (req,res)=> {res.render('login');});
 
-router.post('./views/signup', async (req, res) => {
+router.post('./views/login', async (req, res) => {
   try {
     const userCheck = await Users.findOne({ where: {email:  req.body.email}});
-    if (!userCheck) {res.status(400).json({ message: 'Incorrect email, please try again' });return res.redirect('./views/signup');}
+    if (!userCheck) {res.status(400).json({ message: 'Incorrect email, please try again' });return res.redirect('./views/login');}
 
     const validPassword = await bcrypt.compare(password, Users.password);
 
@@ -22,7 +25,7 @@ router.post('./views/signup', async (req, res) => {
     req.session.logged_in = true;
       
     res.json({ user: userCheck, message: `You're logged in`})
-    req.session.isAuth = true
+    req.session.isAuth = true;
     return res.redirect ('./views/main.handlebars')
     });
     

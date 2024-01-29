@@ -14,27 +14,31 @@ Comments.init(
       user_name: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
         references: {
           model: 'users',
-          key: 'user_name',
-          },
+          key: 'user_id',
+        },
       },
       message: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      comment_date: {
+    /*  comment_date: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Date.now(),
-      },
+        defaultValue: get.DATE(),
+      }, */
       game_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'games',
-            key: 'game_id',
-            },
+          model: 'games',
+          key: 'game_id',
+        },
       }
     },
     {

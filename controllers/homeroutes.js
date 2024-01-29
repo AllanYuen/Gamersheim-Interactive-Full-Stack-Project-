@@ -8,7 +8,6 @@ router.get('/games', (req, res) => {res.render('games');});
 router.get('/genres', (req, res) => {res.render('genres');});
 router.get('/platforms', (req, res) => {res.render('platforms');});
 router.get('/users', (req, res) => {res.render('users');});
-router.get('/platforms', (req, res) => {res.render('platforms');});
 router.get('/login', (req, res) => {
     if(req.session.loggedIn){
         res.redirect('home');

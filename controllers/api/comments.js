@@ -3,7 +3,19 @@ const path = require('path');
 const Comments = require('../../models/comments');
 const withAuth = require('../../utils/auth');
 
-router.get('/', (req,res) => {
+
+
+const isAuth = (req, res, next) => {
+  if(req.session.isAuth) {
+    next()
+  }
+  else {
+    res.redirect('./views/login')
+  }
+}
+
+
+router.get('/', isAuth, (req,res) => {
     Comments.findAll({})
     .then(comments => res.json(comments))
     .catch(err => {
