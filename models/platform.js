@@ -5,7 +5,7 @@ class Platform extends Model {}
 
 Platform.init(
     {
-      platform_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,

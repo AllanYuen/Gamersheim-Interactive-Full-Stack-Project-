@@ -5,7 +5,7 @@ class Comments extends Model {}
 
 Comments.init(
     {
-      comment_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
@@ -20,7 +20,7 @@ Comments.init(
         allowNull: false,
         references: {
           model: 'users',
-          key: 'user_id',
+          key: 'id',
         },
       },
       message: {
@@ -37,7 +37,7 @@ Comments.init(
         allowNull: false,
         references: {
           model: 'games',
-          key: 'game_id',
+          key: 'id',
         },
       }
     },

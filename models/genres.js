@@ -5,7 +5,7 @@ class Genres extends Model {}
 
 Genres.init(
     {
-      genre_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
