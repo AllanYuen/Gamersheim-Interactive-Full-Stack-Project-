@@ -18,6 +18,10 @@ Games.init(
       genre_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+      /*  references: {
+          model: 'genres',
+          key: 'genre_id',
+        },   */
       },
       publisher: {
         type: DataTypes.STRING,
@@ -26,6 +30,10 @@ Games.init(
       platform_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+    /*    references: {
+          model: 'platform',
+          key: 'platform_id',
+        }, */
       },
       release_year: {
         type: DataTypes.INTEGER,

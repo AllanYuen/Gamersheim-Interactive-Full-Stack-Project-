@@ -1,15 +1,16 @@
-// Import necessary modules
-const { Comments } = require('../models/comments');
+const { Comments } = require('../models');
 
-// Seed data for the Users_Library table
+
 const commentsSeedData = [
   {
-      user_name: 'OzdalDogru',
-      message: 'This is the best video game ever',
-      comment_date: '25.01.2024',
-      game_id: 1
+    comment_id: 1 ,
+    user_name: 'OzdalDogru',
+    user_id: 1 ,
+    message: 'This is the best video game ever',
+  //comment_date: 1706494242592,
+    game_id: 1,
   },
-  // Add more entries as needed
+
 ];
 
 

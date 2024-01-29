@@ -14,6 +14,10 @@ UserLibrary.init(
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
+     /*   references: {
+          model: 'users',
+          key: 'user_id',
+        }, */
       },
       game_id: {
         type: DataTypes.INTEGER,

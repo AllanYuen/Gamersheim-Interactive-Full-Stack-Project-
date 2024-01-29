@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 require('dotenv').config();
 
 // Import seed files
+const seedComments = require('./commentsseeds');
 const seedGames = require('./gamesseeds');
 const seedGenres = require('./genresseeds');
 const seedPlatforms = require('./platformsseeds');
@@ -23,6 +24,8 @@ const seedAll = async () => {
     console.log('\n----- users_Library SEEDED -----\n');    
     await seedUsers();
     console.log('\n----- users SEEDED -----\n');   
+    await seedComments();
+    console.log('\n----- comments SEEDED -----\n');  
 
     process.exit(0);
 };
