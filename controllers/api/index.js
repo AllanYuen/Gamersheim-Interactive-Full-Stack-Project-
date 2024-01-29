@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const path = require('path');
 const commentsRoutes = require('./comments');
 const gamesRoutes = require('./games');
 const genresRoutes = require('./genres');
