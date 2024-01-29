@@ -130,7 +130,7 @@ node server.js
 ```
 
 GAMERSHEIM is deployed VIA following link </div>
-<a href="https://polar-journey-77005-c598f31c0871.herokuapp.com/"> GAMERSHEIM </a>
+<a href="https://polar-journey-77005-c598f31c0871.herokuapp.com/"> DEPLOYED APP </a>
 
 
 ## Technology-Used
@@ -195,7 +195,7 @@ For details click on the following link to go to the "LICENSE" file:
 ## Presentation
 
 Group 3 Presentation of Project: 
-[Powerpoint](https://docs.google.com/presentation/d/1m8necGq-oQANwZBUC1rnRNlnMis239FC/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
+[Powerpoint](https://docs.google.com/presentation/d/1xnzeLJCSkiQqjjZmUebgKcdLThbfLlPm/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
 
 to address the following: 
 * `Elevator pitch` A one-minute description of your application.
@@ -210,11 +210,7 @@ to address the following:
 Github direct link:
 https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project- 
 
-Github HTTPS Clone link:
-
 Github Deployment link:
-
-Heroku Deployment link:
 
 ---
 © 2024 "Gamersheim-Interactive-Full-Stack-Project" by `Project 2` `Group 3`. All Rights Reserved.
