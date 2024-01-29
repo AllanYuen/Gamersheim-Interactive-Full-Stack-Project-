@@ -14,10 +14,10 @@ UserLibrary.init(
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
-     /*   references: {
+        references: {
           model: 'users',
-          key: 'user_id',
-        }, */
+          key: 'id',
+        }, 
       },
       game_id: {
         type: DataTypes.INTEGER,
@@ -38,7 +38,7 @@ UserLibrary.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'users_library',
+      modelName: 'library',
       }
 );
 

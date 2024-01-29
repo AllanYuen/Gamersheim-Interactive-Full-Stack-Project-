@@ -4,7 +4,7 @@ const { Games } = require('../models');
 // Seed data for the Games table
 const gameSeedData = [
   {
-    game_id: 1,
+ 
     title: 'Age of Empires 4',
     genre_id: 8,
     publisher: 'Microsoft',
@@ -16,7 +16,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=5TnynE3PuDE',
   },
   {
-    game_id: 2,
+
     title: 'Batman: Arkham knight',
     genre_id: 1,
     publisher: 'Warner Bros',
@@ -28,7 +28,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=dxa34RatmSc',
   },
   {
-    game_id: 3,
+    
     title: 'Bayonetta',
     genre_id: 13,
     publisher: 'Nintendo',
@@ -40,7 +40,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=h7PZ1i992kc',
   },
   {
-    game_id: 4,
+ 
     title: 'Cyberpunk 2077',
     genre_id: 5, 
     publisher: 'CD Projekt',
@@ -52,7 +52,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=BO8lX3hDU30',
   },
   {
-    game_id: 5,
+
     title: 'Dark Souls 3',
     genre_id: 5,
     publisher: 'Bandai Namco',
@@ -64,7 +64,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=jDMj2m50QrM',
   },
   {
-    game_id: 6,
+ 
     title: 'ELDEN RING',
     genre_id: 5,
     publisher: 'Bandai Namco',
@@ -76,7 +76,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=AKXiKBnzpBQ',
   },
   {
-    game_id: 7,
+
     title: 'Grand Theft Auto Trilogy',
     genre_id: 2, 
     publisher: 'Rockstar Games',
@@ -88,7 +88,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=mtyOXKB0M5o',
   },
   {
-    game_id: 8,
+
     title: 'Halo: Combat Evolved',
     genre_id: 10, 
     publisher: 'Microsoft',
@@ -100,7 +100,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=v0kHiEME0Vk',
   },
   {
-    game_id: 9,
+
     title: 'Mario Kart 8 Deluxe',
     genre_id: 4,
     publisher: 'Nintendo',
@@ -112,7 +112,7 @@ const gameSeedData = [
     trailer: 'https://www.youtube.com/watch?v=ZKB9FEXhJ68',
   },
   {
-    game_id: 10,
+   
     title: 'Minecraft',
     genre_id: 8,
     publisher: 'Mojang Studios',

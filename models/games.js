@@ -5,7 +5,7 @@ class Games extends Model {}
 
 Games.init(
     {
-      game_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
@@ -20,7 +20,7 @@ Games.init(
         allowNull: false,
       /*  references: {
           model: 'genres',
-          key: 'genre_id',
+          key: 'id',
         },   */
       },
       publisher: {
@@ -30,10 +30,10 @@ Games.init(
       platform_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-    /*    references: {
+      /*  references: {
           model: 'platform',
-          key: 'platform_id',
-        }, */
+          key: 'id',
+        },  */
       },
       release_year: {
         type: DataTypes.INTEGER,
