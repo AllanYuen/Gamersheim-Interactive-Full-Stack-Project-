@@ -1,5 +1,5 @@
 // Import necessary modules
-const { Comments } = require('../models');
+const { Comments } = require('../models/comments');
 
 // Seed data for the Users_Library table
 const commentsSeedData = [
