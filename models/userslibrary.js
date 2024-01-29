@@ -5,7 +5,7 @@ class UserLibrary extends Model {}
 
 UserLibrary.init(
     {
-      library_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: true,
         primaryKey: true,

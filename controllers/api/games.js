@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const path = require('path');
 const Games = require('../../models/games');
 
 // This is the route to get all games
@@ -14,7 +13,7 @@ router.get('/', async (req, res) => {
 // This is the route to get a single game
 router.get('/Games/:id', async (req, res) => {
     try{
-        const gamesData = await Games.findByPk(req.params.game_id);
+        const gamesData = await Games.findByPk(req.params.id);
         if(!gamesData){
             res.status(404).json({message: 'No game found with this ID!'});
             return;

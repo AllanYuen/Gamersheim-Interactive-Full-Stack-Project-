@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const path = require('path');
 const Genres = require('../../models/genres');
 
 // This is the route to get all genres
@@ -14,7 +13,7 @@ router.get('/', async (req, res) => {
 // This is the route to get a single genre
 router.get('/Genres/:id', async (req, res) => {
     try{
-        const genreData = await Genres.findByPk(req.params.genre_id);
+        const genreData = await Genres.findByPk(req.params.id);
         if(!genreData){
             res.status(404).json({message: 'No genre found with this ID!'});
             return;
