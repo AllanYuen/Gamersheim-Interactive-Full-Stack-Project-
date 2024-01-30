@@ -1,3 +1,4 @@
+{{#each genre as |genre|}}
 <div class="">
     <h2>
         {{games.title}}
@@ -7,10 +8,10 @@
         {{games.description}}
     </p>
     <p>
-        {{games.features}}
-        {{games.releaseYear}}
+        {{games.release_year}}
         {{games.publisher}}
-        {{games.platformId}}
+        {{games.platform_name}}
         
     </p>
 </div>
+{{/each}}

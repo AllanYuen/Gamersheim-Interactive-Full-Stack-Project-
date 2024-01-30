@@ -4,21 +4,16 @@
             Platforms
         </h2>
     </div>
+
+</div>
+
+    {{#each platform as |platform|}}
         <div>
             <a>
                 <button>
-                    {{platform.platform_id}}
+                    {{platform.platform_name}}
                 </button>
             </a>
-            <a>
-                <button>
-                    {{platform.platform_id}}
-                </button>
-            </a>
-            <a>
-                <button>
-                    {{platform.platform_id}}
-                </button>
-            </a>
+
         </div>
-</div>
+    {{/each}}
