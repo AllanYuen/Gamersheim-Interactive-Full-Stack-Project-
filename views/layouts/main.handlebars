@@ -14,21 +14,21 @@
         <span role="img" aria-label="money">&#127918;</span>
       </h1>
       <nav>
-        <a href="">
+        <a href="http://localhost:3001/platforms">
             <button class="platforms-button"> Platforms </button>
         </a>
-        <a href="">
+        <a href="http://localhost:3001/genres">
             <button class="genre-button"> Genre </button>
         </a>
-        <a href="">
+        <a href="http://localhost:3001/games">
             <button class="user-button"> Games </button>
         </a>
-        <a href="">
+        <a href="http://localhost:3001/login">
             <button class="user-button"> Login </button>
         </a>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/comments">Comments</a> |
+        <a href="http://localhost:3001/comments">Comments</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
