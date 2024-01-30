@@ -4,14 +4,7 @@ const withAuth = require('../../utils/auth');
 
 
 
-const isAuth = (req, res, next) => {
-  if(req.session.isAuth) {
-    next()
-  }
-  else {
-    res.redirect('./views/login')
-  }
-}
+const isAuth = (req, res, next) => {if(req.session.isAuth) {next()} else {res.redirect('./views/login')}}
 
 
 router.get('/', isAuth, (req,res) => {
