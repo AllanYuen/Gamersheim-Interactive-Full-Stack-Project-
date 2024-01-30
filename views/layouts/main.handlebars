@@ -5,19 +5,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="">
-            <img src="/assets/images/cardimages/Asset 5.svg" class="logo">
-        </a>
-        <a href="">
-            <button class="gamersheim-button"> Gamersheim </button>
-        </a>
-        <a href="">
-            <button class="popular-button"> Popular </button>
-        </a>
-        <a href="">
-            <button class="upcoming-button"> Upcoming </button>
-        </a>
+   <div>
+
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">&#127918;</span>
+        <a href="/">GamersHeim!</a>
+        <span role="img" aria-label="money">&#127918;</span>
+      </h1>
+      <nav>
         <a href="">
             <button class="platforms-button"> Platforms </button>
         </a>
@@ -25,39 +21,39 @@
             <button class="genre-button"> Genre </button>
         </a>
         <a href="">
-            <button class="user-button"> User </button>
+            <button class="user-button"> Games </button>
         </a>
-    </nav>
+        <a href="">
+            <button class="user-button"> Login </button>
+        </a>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/comments">Comments</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
 
-    <div>
-        <!--main-->
-        {{!-- {{featured games}} --}}
-        {{!-- Replacement of {{featured games}} to support handlebar files to be served up --}}
-        {{{body}}}
-    </div>
-    <div>
-        <!--explore/signup-->
-        <img src="" class="">
-        <p>
-            
-        </p>
-        <a>
-            <button> Explore </button>
-        </a>
-        <a>
-            <button> Sign-up </button>
-        </a>
-    </div>
-    {{!-- Removed below as only one object can be loaded --}}
-    {{!-- <div>
-        <!--explore section-->
-        {{Upcoming}}
 
-    </div> --}}
+
+      <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+              {{{ body }}}
+      </main>
 
     <footer>
 
     </footer>
-    
+   </div>
+
+
+<!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+     {{/if}}
+
+
 </body>
 </html>
