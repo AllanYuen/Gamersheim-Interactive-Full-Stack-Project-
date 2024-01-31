@@ -2,18 +2,18 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const handlebars = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const withAuth = require('./utils/auth');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
 
+
+//user session and cookie
 const sess = {
   secret: 'Super secret secret',
   cookie: {
@@ -31,39 +31,24 @@ const sess = {
 
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+// Set up Handlebars.js engine with custom helpers
+const hbs = exphbs.create({ helpers });
 
+// Inform Express.js on which template engine to use and which file use to be a layout
 
-app.get('/',function(req,res,next){
-  res.render('homepage', {title: "Gamersheim"});
-});
+app.set('view engine', 'hbs');
+app.engine('hbs', handlebars.engine({
+  layoutsDir: `${__dirname}/views/layouts`,
+  extname: 'hbs',
+  defaultLayout: 'main'
+}));
 
-app.get('/login',function(req,res,next){
-  res.render('login');
-});
-
-app.get('/games',function(req,res,next){
-  res.render('games');
-});
-
-app.get('/platforms',function(req,res,next){
-  res.render('platforms');
-});
-
-app.get('/genres',function(req,res,next){
-  res.render('genres');
-});
-
-app.get('/comments', withAuth, function(req,res,next){
-  res.render('comments');
-});
-
+app.get('/',(req,res) => {res.render('homepage',)});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('./controllers/'));
 
 app.use(routes);
 

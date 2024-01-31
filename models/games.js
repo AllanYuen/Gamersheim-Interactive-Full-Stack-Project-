@@ -15,25 +15,18 @@ Games.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      genre_id: {
-        type: DataTypes.INTEGER,
+      genre_name: {
+        type: DataTypes.STRING,
         allowNull: false,
-      /*  references: {
-          model: 'genres',
-          key: 'id',
-        },   */
+
       },
       publisher: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      platform_id: {
-        type: DataTypes.INTEGER,
+      platform_name: {
+        type: DataTypes.STRING,
         allowNull: false,
-      /*  references: {
-          model: 'platform',
-          key: 'id',
-        },  */
       },
       release_year: {
         type: DataTypes.INTEGER,
@@ -60,7 +53,7 @@ Games.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'games',
+        modelName: 'game',
       }
 );
 

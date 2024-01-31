@@ -1,0 +1,31 @@
+ <nav class="navbar">
+
+        <a href="/">
+            <button class="gamersheim-button"> Gamersheim </button>
+        </a>
+        <a href="/titles">
+            <button class="gamersheim-button"> Titles </button>
+        </a>
+        <a href="http://localhost:3001/platforms">
+            <button class="popular-button"> Platforms </button>
+        </a>
+        <a href="http://localhost:3001/genres">
+            <button class="upcoming-button"> Genre </button>
+        </a>
+        <a href="http://localhost:3001/games">
+            <button class="platforms-button"> Games </button>
+        </a>
+        {{#if logged_in}}
+        <a href="http://localhost:3001/comments">Comments</a> |
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <a href="http://localhost:3001/login">Login</a>
+       {{/if}}
+
+    <h1 style="text-align:center;position:relative;background-color: black; color:aliceblue">
+        <div > <span role="img" aria-label="controller">&#127918;</span>WELCOME to GAMERSHEIM<span role="img" aria-label="controller">&#127918;</span></div>
+    </h1>
+    
+</nav>
+
+

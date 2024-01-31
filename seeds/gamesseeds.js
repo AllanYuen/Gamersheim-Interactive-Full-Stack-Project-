@@ -1,14 +1,14 @@
 // Import necessary modules
-const { Games } = require('../models');
+const {Games} = require('../models');
 
 // Seed data for the Games table
-const gameSeedData = [
+const gamesSeedData = [
   {
  
     title: 'Age of Empires 4',
-    genre_id: 8,
+    genre_name: 'Strategy',
     publisher: 'Microsoft',
-    platform_id: 9,
+    platform_name: 'PC',
     release_year: 2005,
     game_description: 'Age of Empires IV is a real-time strategy video game.',
     features: ' ', 
@@ -18,9 +18,9 @@ const gameSeedData = [
   {
 
     title: 'Batman: Arkham knight',
-    genre_id: 1,
+    genre_name: 'Action',
     publisher: 'Warner Bros',
-    platform_id: 2, 
+    platform_name: 'Playstation 3', 
     release_year: 2015,
     game_description: 'Batman: Arkham Knight is an action-adventure game.',
     features: ' ', 
@@ -30,9 +30,9 @@ const gameSeedData = [
   {
     
     title: 'Bayonetta',
-    genre_id: 13,
+    genre_name: 'Hack and Slash',
     publisher: 'Nintendo',
-    platform_id: 10,
+    platform_name: 'Nintendo Switch',
     release_year: 2009,
     game_description: 'Bayonetta is a series of hack and slash action-adventure games.',
     features: ' ', 
@@ -42,9 +42,9 @@ const gameSeedData = [
   {
  
     title: 'Cyberpunk 2077',
-    genre_id: 5, 
+    genre_name: 'RPG', 
     publisher: 'CD Projekt',
-    platform_id: 3, 
+    platform_name: 'Playstation 4', 
     release_year: 2020,
     game_description: 'Cyberpunk 2077 is an action role-playing video game.',
     features: ' ', 
@@ -54,9 +54,9 @@ const gameSeedData = [
   {
 
     title: 'Dark Souls 3',
-    genre_id: 5,
+    genre_name: 'RPG',
     publisher: 'Bandai Namco',
-    platform_id: 7,
+    platform_name: 'Xbox One',
     release_year: 2016,
     game_description: 'Dark Souls III is an action role-playing game.',
     features: ' ', 
@@ -66,9 +66,9 @@ const gameSeedData = [
   {
  
     title: 'ELDEN RING',
-    genre_id: 5,
+    genre_name: 'RPG',
     publisher: 'Bandai Namco',
-    platform_id: 4,
+    platform_name: 'Playstation 5',
     release_year: 2022,
     game_description: 'Dark Souls III is an action role-playing game..',
     features: ' ', 
@@ -78,9 +78,9 @@ const gameSeedData = [
   {
 
     title: 'Grand Theft Auto Trilogy',
-    genre_id: 2, 
+    genre_name: 'Adventure', 
     publisher: 'Rockstar Games',
-    platform_id: 8, 
+    platform_name: 'Xbox Series X', 
     release_year: 2021,
     game_description: 'Grand Theft Auto: The Trilogy is a compilation of three action-adventure games in the Grand Theft Auto series: Grand Theft Auto III, Grand Theft Auto: Vice City, and Grand Theft Auto: San Andreas.',
     features: ' ', 
@@ -90,9 +90,9 @@ const gameSeedData = [
   {
 
     title: 'Halo: Combat Evolved',
-    genre_id: 10, 
+    genre_name: 'Shooter', 
     publisher: 'Microsoft',
-    platform_id: 5, 
+    platform_name: 'Xbox', 
     release_year: 2001,
     game_description: 'Halo: Combat Evolved is a first-person shooter video game.',
     features: ' ', 
@@ -102,9 +102,9 @@ const gameSeedData = [
   {
 
     title: 'Mario Kart 8 Deluxe',
-    genre_id: 4,
+    genre_name: 'Racing',
     publisher: 'Nintendo',
-    platform_id: 10,
+    platform_name: 'Nintendo Switch',
     release_year:2014,
     game_description: 'Mario Kart 8 Deluxe is a racing video game.',
     features: ' ', 
@@ -114,9 +114,9 @@ const gameSeedData = [
   {
    
     title: 'Minecraft',
-    genre_id: 8,
+    genre_name: 'Strategy',
     publisher: 'Mojang Studios',
-    platform_id: 9,
+    platform_name: 'PC',
     release_year: 2011,
     game_description: 'Minecraft is a sandbox game.',
     features: ' ', 
@@ -126,6 +126,7 @@ const gameSeedData = [
 ];
 
 
-const seedGames = () => Games.bulkCreate(gameSeedData);
+const seedGames = () => Games.bulkCreate(gamesSeedData);
 
 module.exports = seedGames;
+

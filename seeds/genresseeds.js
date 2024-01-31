@@ -4,60 +4,46 @@ const { Genres } = require('../models');
 // Seed data for the Genres table
 const genreSeedData = [
   {
-
-    genre_name: 'Action',
+    name: 'Action',
   },
   {
-
-    genre_name: 'Adventure',
+    name: 'Adventure',
   },
   {
-
-    genre_name: 'Multiplayer',
+    name: 'Multiplayer',
   },
   {
-   
-    genre_name: 'Racing',
+     name: 'Racing',
   },
   {
- 
-    genre_name: 'RPG',
+     name: 'RPG',
   },
   {
-
-    genre_name: 'Simulation',
+    name: 'Simulation',
   },
   {
-
-    genre_name: 'Sports',
+    name: 'Sports',
   },
   {
-
-    genre_name: 'Strategy',
+    name: 'Strategy',
   },
   {
-
-    genre_name: 'Horror',
+    name: 'Horror',
   },
   {
-
-    genre_name: 'Shooter',
+    name: 'Shooter',
   },
   {
- 
-    genre_name: 'Fighting',
+     name: 'Fighting',
   },
   {
-
-    genre_name: 'Side Scrolling',
+    name: 'Side Scrolling',
   },
   {
-
-    genre_name: 'Hack and Slash',
+    name: 'Hack and Slash',
   },
   {
-
-    genre_name: 'platform',
+    name: 'platform',
   },
 ];
 

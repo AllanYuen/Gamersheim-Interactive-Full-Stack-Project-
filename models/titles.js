@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Platform extends Model {}
+class Titles extends Model {}
 
-Platform.init(
+Titles.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -11,7 +11,7 @@ Platform.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      platform_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: true,
       },
@@ -21,8 +21,8 @@ Platform.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'platform',
+      modelName: 'title',
     },
 );
 
-module.exports = Platform
+module.exports = Titles
