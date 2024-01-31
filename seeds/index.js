@@ -7,8 +7,8 @@ const seedComments = require('./commentsseeds');
 const seedGames = require('./gamesseeds');
 const seedGenres = require('./genresseeds');
 const seedPlatforms = require('./platformsseeds');
-const seedUsersLibrary = require('./userslibraryseeds');
 const seedUsers = require('./usersseeds');
+const seedTitles = require('./titlesseeds');
 
 // Function to seed all tables
 const seedAll = async () => {
@@ -20,12 +20,12 @@ const seedAll = async () => {
     console.log('\n----- genres SEEDED -----\n');
     await seedPlatforms();
     console.log('\n----- platforms SEEDED -----\n');
-    await seedUsersLibrary();
-    console.log('\n----- users_Library SEEDED -----\n');    
     await seedUsers();
     console.log('\n----- users SEEDED -----\n');   
     await seedComments();
     console.log('\n----- comments SEEDED -----\n');  
+    await seedTitles();
+    console.log('\n----- titles SEEDED -----\n'); 
 
     process.exit(0);
 };

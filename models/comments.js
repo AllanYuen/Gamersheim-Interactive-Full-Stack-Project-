@@ -11,15 +11,10 @@ Comments.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      user_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
       user_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
      /*   references: {
-          model: 'users',
+          model: 'user',
           key: 'id',
         }, */
       },
@@ -32,12 +27,12 @@ Comments.init(
         allowNull: false,
         defaultValue: get.DATE(),
       }, */
-      game_id: {
-        type: DataTypes.INTEGER,
+      game_name: {
+        type: DataTypes.STRING,
         allowNull: false,
      /*   references: {
-          model: 'games',
-          key: 'id',
+          model: 'game',
+          key: 'title',
         }, */
       }
     },
@@ -46,7 +41,7 @@ Comments.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comments',
+        modelName: 'comment',
       }
 );
 

@@ -3,8 +3,7 @@ const { Users } = require('../models');
 
 // Seed data for the Users table
 const usersSeedData = [
-  {
- 
+  { 
     first_name: 'Ozdal',
     last_name: 'Dogru',
     email: 'OzdalDogru@email.com',

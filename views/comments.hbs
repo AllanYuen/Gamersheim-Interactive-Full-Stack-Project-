@@ -1,0 +1,14 @@
+<div class="menu-container">
+
+  <div class="card-header col-md-10"> 
+    <h1 style="text-align:center;position:relative">List of Comments</h1> 
+  </div>
+
+  {{#each games as |games|}}
+    <div class="dish col-md-5">
+
+      <a href="http://localhost:3001/comments/{{id}}"><p>{{id}}.{{name}}</p></a>
+    </div>
+
+  {{/each}}
+</div>
