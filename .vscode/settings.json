@@ -17,6 +17,7 @@
         "gamescard",
         "gamesseeds",
         "genresseeds",
+        "Hackand",
         "homeroute",
         "homeroutes",
         "jass",
@@ -24,6 +25,7 @@
         "Marchildon",
         "Mojang",
         "Namco",
+        "nswitch",
         "Ozdal",
         "platformsseeds",
         "Projekt",
@@ -42,6 +44,8 @@
         "userslibrary",
         "userslibraryseeds",
         "usersseeds",
+        "xboxone",
+        "xboxsx",
         "Yuen"
     ]
 }
