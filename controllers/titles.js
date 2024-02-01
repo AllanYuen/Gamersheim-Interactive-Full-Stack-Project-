@@ -19,7 +19,7 @@ router.get('/titles/:id', async (req, res) => {
           res.status(404).json({message: 'No Title with this id!'});
           return;
       }
-      const title = titlesData.get({ plain: true });
+      const title = titlesData.get({ id: id });
       res.render('title', title);
     } 
     catch (err) {res.status(500).json(err);};     

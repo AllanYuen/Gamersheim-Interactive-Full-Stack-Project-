@@ -43,7 +43,7 @@ const platformSeedData = [
     name: 'Retro Console',
   },
   {
-    name: 'other',
+    name: 'Other',
   },
 ];
 

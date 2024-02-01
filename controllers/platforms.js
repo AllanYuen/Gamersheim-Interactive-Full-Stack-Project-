@@ -20,7 +20,7 @@ router.get('/platforms/:id', async (req, res) => {
           return;
       }
       const platform = platformsData.get({ plain: true });
-      res.render('platforms', platform);
+      res.render('platform', platform);
     } 
     catch (err) {res.status(500).json(err);};     
 });

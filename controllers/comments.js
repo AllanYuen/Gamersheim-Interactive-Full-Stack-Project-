@@ -1,6 +1,31 @@
 const router = require('express').Router();
-const { Games,Genres,Platforms,Users,Comments,Titles }= require('../../models');
-const withAuth = require('../../utils/auth');
+const { Comments }= require('../models');
+const withAuth = require('../utils/auth');
+
+
+// route to get all 
+router.get('/', async (req, res) => {
+  const commentsData = await Comments.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const comments = commentsData.map((comment) => comment.get({ plain: true }));
+      res.render('comments', { comments });
+    });
+
+// route to get one
+router.get('/comments/:id', async (req, res) => {
+  try {
+    const commentsData = await Comments.findByPk(req.params.id, {});
+
+    const comment = commentsData.get({ plain: true });
+    res.render('comment', comment);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+module.exports = router;
 
 
 router.post('/', withAuth, async (req, res) => {

@@ -4,10 +4,9 @@
     <h1 style="text-align:center;position:relative">List of Comments</h1> 
   </div>
 
-  {{#each games as |games|}}
+  {{#each comment as |comment|}}
     <div class="dish col-md-5">
-
-      <a href="http://localhost:3001/comments/{{id}}"><p>{{id}}.{{name}}</p></a>
+      <p>Game: {{game_name}}</p> <p>Comment: {{message}}</p>
     </div>
 
   {{/each}}
