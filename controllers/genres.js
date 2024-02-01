@@ -20,7 +20,7 @@ router.get('/genres/:id', async (req, res) => {
           return;
       }
       const genre = genresData.get({ plain: true });
-      res.render('genres', genre);
+      res.render('genre', genre);
     } 
     catch (err) {res.status(500).json(err);};     
 });

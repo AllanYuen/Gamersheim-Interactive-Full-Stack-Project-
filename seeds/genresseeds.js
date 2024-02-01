@@ -43,7 +43,7 @@ const genreSeedData = [
     name: 'Hack and Slash',
   },
   {
-    name: 'platform',
+    name: 'Platform',
   },
 ];
 

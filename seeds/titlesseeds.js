@@ -1,23 +1,19 @@
 // Import necessary modules
-const { Titles } = require('../models/titles');
+const { Titles } = require('../models');
 
 // Seed data for the Platform table
 const titlesSeedData = [
 
   { 
-    id: 1,
-    name: 'Games',
+     name: 'Games',
   },
   {
-    id: 2,
     name: 'Genres',
   },
   {
-    id: 3,
     name: 'Platforms',
   },
 ];
 
-
-const seedTitles = () => Titles.createBulk(titlesSeedData);
+const seedTitles = () => Titles.bulkCreate(titlesSeedData);
 module.exports = seedTitles;

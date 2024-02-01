@@ -20,7 +20,7 @@ router.get('/titles/:id', async (req, res) => {
           return;
       }
       const title = titlesData.get({ plain: true });
-      res.render('homepage', title);
+      res.render('title', title);
     } 
     catch (err) {res.status(500).json(err);};     
 });

@@ -1,0 +1,14 @@
+<h1 style="text-align:center;position:relative">List of Games</h1> 
+
+{{#each games as |game|}}
+<section class="card">
+
+  <img src="/images/{{cover_image}}" alt="game cover">
+  <div class="painting-details">
+      <a href="http://localhost:3001/games/{{id}}"><h3>{{title}}</h3></a>
+    <p>{{game_description}}</p>    
+    <p>{{publisher}}</p>
+
+  </div>
+</section>
+  {{/each}}
