@@ -42,11 +42,11 @@ app.engine('handlebars', handlebars.engine({
 
 app.get('/',(req,res) => {res.render('homepage',)});
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/'));
-app.use("/", express.static(path.join(__dirname, "/public/images")));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {

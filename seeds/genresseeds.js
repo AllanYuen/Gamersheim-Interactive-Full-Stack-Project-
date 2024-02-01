@@ -37,10 +37,10 @@ const genreSeedData = [
      name: 'Fighting',
   },
   {
-    name: 'Side Scrolling',
+    name: 'SideScrolling',
   },
   {
-    name: 'Hack and Slash',
+    name: 'HackandSlash',
   },
   {
     name: 'Platform',
