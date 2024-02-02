@@ -126,7 +126,7 @@ node server.js
 ```
 
 GAMERSHEIM is deployed VIA following link </div>
-<a href="https://polar-journey-77005-c598f31c0871.herokuapp.com/"> DEPLOYED APP </a>
+<a href="https://gamersheim-67293fc106fb.herokuapp.com"> HEROKU </a>
 
 
 ## Technology-Used
@@ -161,25 +161,6 @@ For details click on the following link to go to the "LICENSE" file:
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=mit)](https://opensource.org/licenses/MIT)
 
 
-### Screenshots
-
-<div align="center">
-  
-![#1.Screenshot of the Gamersheim Homepage](./assets/images/FIFA_23_Cover.jpg)
-
-![#2.Screenshot of the Popular Category](./assets/images/Devil_May_Cry_5.jpg)
-
-![#3.Screenshot of the Upcoming Category](./assets/images/Doom_cover_art.jpg)
-
-![#4.Screenshot of the Platforms Category](./assets/images/Grand_Theft_Auto_V.png)
-
-![#5.Screenshot of the Genre Category](./assets/images/Resident_Evil_3.jpg)
-
-![#6.Screenshot of the User Category](./public/images/Witcher_3_cover_art.jpg)
-
-</div>
-</div>
-
 
 ## Collaborators
 [![OzdalDogru](https://img.shields.io/badge/Ozdal-Dogru-blueviolet)](https://github.com/ozdaldogru)
@@ -204,6 +185,7 @@ to address the following:
 ## Deployment
 
 Github direct link:
+
 https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project- 
 
 Github Deployment link:

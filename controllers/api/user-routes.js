@@ -8,8 +8,8 @@ router.get('/login', (req,res) => res.render('login'));
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await Users.create({
-      firstname:req.body.firstname,
-      lastname:req.body.lastname,
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
       email: req.body.email,
       password: req.body.password,
     });

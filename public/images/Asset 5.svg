@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 461.15 518.91">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 461.15 518.91">
   <defs>
     <style>
       .cls-1 {
         fill: none;
-        stroke: #ffffff;
+        stroke: #2f4f4f;
         stroke-miterlimit: 10;
         stroke-width: 20px;
       }
 
       .cls-2 {
-        fill: #ffffff;
+        fill: #2f4f4f ;
         stroke-width: 0px;
       }
     </style>

@@ -1,9 +1,10 @@
+<link rel="stylesheet" href="../public/css/style.css">
 {{#each genres as |genre|}}
 <section class="card">
 
   <img src="/images/{{name}}.jpeg" alt="game cover">
   <div class="painting-details">
-      <a href="http://localhost:3001/genres/{{id}}"><h3>{{name}}</h3></a>
+      <a href="/genres/{{id}}"><h3 style="color: blue;">{{name}}</h3></a>
   </div>
 </section>
   {{/each}}
