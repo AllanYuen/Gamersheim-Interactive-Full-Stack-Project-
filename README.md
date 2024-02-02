@@ -185,6 +185,7 @@ to address the following:
 ## Deployment
 
 Github direct link:
+
 https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project- 
 
 Github Deployment link:
