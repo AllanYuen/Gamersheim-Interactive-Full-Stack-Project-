@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  background-color: var(--quatrinary);
+  background-color: var(--primary);
  
 }
 
@@ -38,8 +38,10 @@ a:visited {
 
 header {
   padding: 40px;
+  display:contents;
   text-align: center;
-  background: var(--primary);
+
+  background: 86938f;
   color: var(--light);
 }
 
@@ -60,7 +62,8 @@ aside {
 .controllers {
 
   display: flex;
-  align-items:center;
+  justify-items: center;
+  align-items:last baseline;
 
   background-color: var(--secondary);
 

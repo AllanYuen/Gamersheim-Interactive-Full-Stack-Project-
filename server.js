@@ -41,6 +41,7 @@ app.engine('handlebars', handlebars.engine({
 
 
 app.get('/',(req,res) => {res.render('homepage',)});
+app.get('/login', (req,res) => res.render('login'));
 
 
 app.use(express.json());

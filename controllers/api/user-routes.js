@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Users } = require('../../models');
 
-router.get('/login', (req,res) => res.render('login'));
-
 
 // CREATE new user
 router.post('/', async (req, res) => {

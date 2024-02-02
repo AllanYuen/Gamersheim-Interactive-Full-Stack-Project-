@@ -1,9 +1,23 @@
-{{#each comments as |comment|}}
-<section class="card">
+<style>
+table, th, td 
+{border:1px solid black;
+margin: 0%;
+padding: 0%;
+position: left;
+}
 
-  <div class="painting-details">
-      <a href="/comments/{{id}}"><h3 style="color: blue;">{{game_name}}</h3></a>
-      <p>{{message}}</p>
-  </div>
-</section>
+</style>
+
+
+{{#each comments as |comment|}}
+  <table>
+  <tr>
+    <th>Game Title</th>
+    <th>Comment</th>
+  </tr>
+  <tr>
+    <td><a href="/comments/{{id}}"><h3 style="color: blue;">{{game_name}}</h3></a></td>
+    <td>{{message}}</td>
+  </tr>
+</table>
   {{/each}}
