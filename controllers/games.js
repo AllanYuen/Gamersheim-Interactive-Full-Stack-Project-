@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 router.get('/games/:id', async (req, res) => {
   try {
     const gamesData = await Games.findByPk(req.params.id);
-    const games = gamesData.get({ plain: true });
+    const game = gamesData.get({ plain: true });
     res.render('game', { game });
   } catch (err) {
     console.log(err);

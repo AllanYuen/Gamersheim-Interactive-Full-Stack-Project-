@@ -17,8 +17,11 @@ const loginFormHandler = async (event) => {
       if (response.ok) {document.location.replace('/comments');
       } 
       else {alert(response.statusText);}}};
+
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
   
-  const signupFormHandler = async (event) => {
+const signupFormHandler = async (event) => {
     event.preventDefault();
   
     const firstname = document.querySelector('#firstname-signup').value.trim();
@@ -29,21 +32,16 @@ const loginFormHandler = async (event) => {
     if (firstname && lastname && email && password) {
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ first_name, last_name, email, password }),
+        body: JSON.stringify({ firstname, lastname, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
-      if (response.ok) {
-        document.location.replace('/comments');
-      } 
+      if (response.ok) {document.location.replace('/comments');} 
       else {alert(response.statusText);}
-    }};
+    }
+  };
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+
   
-  document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
   
