@@ -25,8 +25,6 @@ router.get('/comments/:id', async (req, res) => {
   }
 });
 
-module.exports = router;
-
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -58,3 +56,5 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 module.exports = router;
+
+

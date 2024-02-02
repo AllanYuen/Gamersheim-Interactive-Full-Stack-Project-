@@ -14,15 +14,16 @@ router.get('/', async (req, res) => {
 // route to get one
 
 router.get('/games/:id', async (req, res) => {
-  try {
-    const gamesData = await Games.findByPk(req.params.id);
-    const game = gamesData.get({ plain: true });
-    res.render('game', { game });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+  try{ 
+      const gamesData = await Games.findByPk(req.params.id);
+      if(!gamesData) {
+          res.status(404).json({message: 'No Game with this id!'});
+          return;
+      }
+      const game = gamesData.get({ plain: true });
+      res.render('game', game);
+    } 
+    catch (err) {res.status(500).json(err);};     
 });
-
 
 module.exports = router;
