@@ -13,10 +13,10 @@ Comments.init(
       },
       user_id: {
         type: DataTypes.INTEGER,
-     /*   references: {
+        references: {
           model: 'user',
           key: 'id',
-        }, */
+        }, 
       },
       message: {
         type: DataTypes.STRING,
@@ -30,10 +30,6 @@ Comments.init(
       game_name: {
         type: DataTypes.STRING,
         allowNull: false,
-     /*   references: {
-          model: 'game',
-          key: 'title',
-        }, */
       }
     },
     {

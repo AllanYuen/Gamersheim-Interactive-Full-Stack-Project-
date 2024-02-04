@@ -18,7 +18,10 @@ Games.init(
       genre_name: {
         type: DataTypes.STRING,
         allowNull: false,
-
+      },
+      genre_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
       },
       publisher: {
         type: DataTypes.STRING,
@@ -26,7 +29,6 @@ Games.init(
       },
       platform_name: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       release_year: {
         type: DataTypes.INTEGER,

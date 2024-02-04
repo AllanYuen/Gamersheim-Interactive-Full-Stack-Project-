@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const  {Platforms} = require('../models');
+const  {Platforms , Games} = require('../models');
 
 
 // route to get all 
@@ -12,17 +12,29 @@ router.get('/', async (req, res) => {
     });
 
 // route to get one
-router.get('/platforms/:id', async (req, res) => {
-  try{ 
-      const platformsData = await Platforms.findByPk(req.params.id);
-      if(!platformsData) {
-          res.status(404).json({message: 'No Platform with this id!'});
-          return;
-      }
-      const platform = platformsData.get({ plain: true });
-      res.render('platform', platform);
-    } 
-    catch (err) {res.status(500).json(err);};     
+
+router.get('/platform/:id',  async (req, res) => {
+  try {
+    const platformData = await Platforms.findByPk(req.params.id, {
+      include: [
+        {
+          model: Platforms,
+          attributes: [
+            'id',
+            'name',
+            'image',
+          ],
+        },
+      ],
+    });
+
+    const platform = platformData.get({ plain: true });
+    res.render('platform', { platform });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
+
 
 module.exports = router;

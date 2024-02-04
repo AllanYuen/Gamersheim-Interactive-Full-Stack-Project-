@@ -12,20 +12,9 @@ router.get('/', async (req, res) => {
       res.render('comments', { comments });
     });
 
-// route to get one
-router.get('/comments/:id', async (req, res) => {
-  try {
-    const commentsData = await Comments.findByPk(req.params.id, {});
-
-    const comment = commentsData.get({ plain: true });
-    res.render('comment', comment);
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 
+//route to post one
 router.post('/', withAuth, async (req, res) => {
   try {
     const newComment = await Comments.create({
@@ -38,6 +27,8 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+
+//route to delete one
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Comments.destroy({
