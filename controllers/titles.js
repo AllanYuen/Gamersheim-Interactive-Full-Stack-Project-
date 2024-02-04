@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     });
 
 // route to get one
-router.get('/titles/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try{ 
       const titlesData = await Titles.findByPk(req.params.id);
       if(!titlesData) {
