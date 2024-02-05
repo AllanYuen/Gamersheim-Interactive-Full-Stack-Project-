@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { hash } = require('bcrypt');
 const { Users } = require('../../models');
 
 // CREATE new user
@@ -25,39 +26,30 @@ router.post('/', async (req, res) => {
 
 
 // Login
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
+
   try {
-    const dbUserData = await Users.findByPk(req.params.id, {
+    const userData = await Users.findOne(req.body.id,{
       include: [
-        {
-          model: Users,
-          attributes: [
-            'email',
-            'password',
-          ],
+        {  
+          firstname: req.body.firstname,
+          email: req.body.email,
+          password: req.body.password
+          ,
         },
       ],
     });
+    const passCheck = await compare(req.body.password, userData.password);
 
-    if (!dbUserData) {
-      res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
-      return;
+    if (userData && passCheck) {
+      res.render("homepage", {firstname:req.body.firstname});
     }
-
-    const validPassword = await dbUserData.checkPassword(req.body.password);
-
-    if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
-      return;
-    }
-
-    req.session.save(() => {
-      req.session.loggedIn = true;
-
-      res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
-    });
-  } catch (err) {console.log(err);res.status(500).json(err);}
+    else {"Please Check Your Inputs"}
+  }
+  catch { res.send("Pleas Check Your Inputs")}
 });
+
+module.exports = router;
 
 // Logout
 router.post('/logout', (req, res) => {
@@ -68,3 +60,6 @@ router.post('/logout', (req, res) => {
   } else {res.status(404).end();}});
 
 module.exports = router;
+
+
+

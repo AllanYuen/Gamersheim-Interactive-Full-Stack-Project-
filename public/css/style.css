@@ -65,7 +65,7 @@ aside {
   justify-items: center;
   align-items:last baseline;
 
-  background-color: var(--secondary);
+  background-color: var(--primary);
 
 }
 
@@ -74,7 +74,7 @@ nav {
   display: flex;
   justify-content:end;
   align-items: end;
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 
 nav a {
