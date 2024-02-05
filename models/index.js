@@ -7,7 +7,7 @@ const Titles = require('./titles');
 
 
   Users.hasMany(Comments, {foreignKey: 'user_id',onDelete: 'CASCADE',});
-  Comments.belongsTo(Users, {foreignKey: 'user_id',onDelete: 'CASCADE',});
+  Comments.belongsTo(Users, {foreignKey: 'user_id'});
 
 
 

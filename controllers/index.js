@@ -19,6 +19,9 @@ router.use('/comments', commentsRoutes);
 router.get('/',(req,res) => {res.render('homepage',)});
 router.get('/login', (req,res) => res.render('login'));
 router.get('/comments', (req,res) => res.render('comments'));
+router.get('/adddeletecomment', (req,res) => res.render('adddeletecomment'));
+
+
 
 module.exports = router;
 

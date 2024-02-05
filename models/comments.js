@@ -30,7 +30,7 @@ Comments.init(
       game_name: {
         type: DataTypes.STRING,
         allowNull: false,
-      }
+      },
     },
     {
         sequelize,

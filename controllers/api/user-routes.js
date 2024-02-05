@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { hash } = require('bcrypt');
 const { Users } = require('../../models');
 
-// CREATE new user
+
+// Create new user
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await Users.create({
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+    req.session.loggedIn = true;
 
       res.status(200).json(dbUserData);
     });
@@ -26,30 +26,39 @@ router.post('/', async (req, res) => {
 
 
 // Login
-router.post("/login", async (req, res) => {
-
+router.post('/login', async (req, res) => {
   try {
-    const userData = await Users.findOne(req.body.id,{
-      include: [
-        {  
-          firstname: req.body.firstname,
-          email: req.body.email,
-          password: req.body.password
-          ,
-        },
-      ],
-    });
-    const passCheck = await compare(req.body.password, userData.password);
+    const dbUserData = await Users.findOne(req.body,{ where: { email: req.body.email } });
 
-    if (userData && passCheck) {
-      res.render("homepage", {firstname:req.body.firstname});
+    if (!dbUserData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email, please try again' });
+      return;
     }
-    else {"Please Check Your Inputs"}
+
+    const validPassword = await dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+
+  } catch (err) {
+    res.status(400).json(err);
   }
-  catch { res.send("Pleas Check Your Inputs")}
 });
 
-module.exports = router;
+
 
 // Logout
 router.post('/logout', (req, res) => {

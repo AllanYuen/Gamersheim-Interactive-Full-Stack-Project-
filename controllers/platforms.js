@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const  {Platforms , Games} = require('../models');
+const  {Platforms} = require('../models');
 
 
 // route to get all 
