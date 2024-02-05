@@ -1,11 +1,37 @@
-{{#each comments as |comment|}}
-<section class="card">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 0;
+}
 
-  <div class="painting-details">
-    <h3>{{game_name}}</h3>
-    <p>{{message}}</p>
-  </div>
-</section>
+td, th {
+  border: 1px solid darkslategray;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+{{#if loggedIn}}
+<table>
+  <tr>
+    <th>Game Title</th>
+    <th>Comment</th>
+
+  </tr>
+  {{#each comments as |comment|}}
+  <tr>
+    <td>{{game_name}}</td>
+    <td>{{message}}</td>
+
+  </tr>
 {{/each}}
+</table>
 
-
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

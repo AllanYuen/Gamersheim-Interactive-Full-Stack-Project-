@@ -5,8 +5,7 @@ const genresRoutes = require('./genres.js');
 const gamesRoutes = require('./games.js');
 const platformsRoutes = require('./platforms.js');
 const commentsRoutes = require('./comments');
-const loginRoutes = require('./login');
-const testRoutes = require('./test');
+const usercommentRoutes = require('./usercomment');
 
 
 router.use('/api', apiRoutes);
@@ -15,8 +14,7 @@ router.use('/games', gamesRoutes);
 router.use('/platforms', platformsRoutes);
 router.use('/titles', titlesRoutes);
 router.use('/comments', commentsRoutes);
-router.use('/login', loginRoutes);
-router.use('/', testRoutes);
+router.use('/', usercommentRoutes);
 
 module.exports = router;
 
