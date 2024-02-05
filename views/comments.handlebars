@@ -16,22 +16,19 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
-{{#if loggedIn}}
+
 <table>
   <tr>
     <th>Game Title</th>
     <th>Comment</th>
+    <th>Action</th>
 
   </tr>
   {{#each comments as |comment|}}
   <tr>
     <td>{{game_name}}</td>
     <td>{{message}}</td>
-
+    <td><button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button></td>
   </tr>
 {{/each}}
 </table>
-
-{{else}}
-<a href="/login">You must login first to view this page</a>
-{{/if}}

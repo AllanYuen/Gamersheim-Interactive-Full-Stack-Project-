@@ -40,9 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-app.get('/',(req,res) => {res.render('homepage',)});
-app.get('/login', (req,res) => res.render('login'));
-app.get('/comments', (req,res) => res.render('comments'));
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

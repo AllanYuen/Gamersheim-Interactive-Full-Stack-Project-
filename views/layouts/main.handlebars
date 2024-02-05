@@ -30,11 +30,11 @@
         <a href="/games"><button class="platforms-button"> Games </button> </a>
         <a href="/comments"><button class="platforms-button"> Comments </button></a>
 
-        {{#if logged_in}}
-        <button class="no-button" id="logout">Logout</button>
+        {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
-        <a href="/login"><button class="no-button" id="logout">Login</button></a>
-        {{/if}}
+        <a href="/login">Login</a>
+        {{/if}} 
    
     </nav>
 
