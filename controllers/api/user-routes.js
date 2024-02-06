@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
     req.session.loggedIn = true;
 
       res.status(200).json(dbUserData);
+      
     });
   } catch (err) {
     console.log(err);
@@ -28,7 +29,7 @@ router.post('/', async (req, res) => {
 // Login
 router.post('/login', async (req, res) => {
   try {
-    const dbUserData = await Users.findOne(req.body,{ where: { email: req.body.email } });
+    const dbUserData = await Users.findByPk(req.body.id);
 
     if (!dbUserData) {
       res

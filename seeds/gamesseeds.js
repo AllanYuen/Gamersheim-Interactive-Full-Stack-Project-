@@ -43,19 +43,6 @@ const gamesSeedData = [
     trailer: 'https://www.youtube.com/watch?v=h7PZ1i992kc',
   },
   {
- 
-    title: 'Cyberpunk 2077',
-    genre_name: 'RPG', 
-    genre_id: 5,
-    publisher: 'CD Projekt',
-    platform_name: 'Playstation 4', 
-    release_year: 2020,
-    game_description: 'Cyberpunk 2077 is an action role-playing video game.',
-    features: 'https://en.wikipedia.org/wiki/Cyberpunk_2077', 
-    cover_image: '/images/Cyberpunk_2077_box_art.jpg',
-    trailer: 'https://www.youtube.com/watch?v=BO8lX3hDU30',
-  },
-  {
 
     title: 'Dark Souls 3',
     genre_name: 'RPG',
@@ -106,19 +93,6 @@ const gamesSeedData = [
     features: 'https://en.wikipedia.org/wiki/Halo:_Combat_Evolved', 
     cover_image: '/images/Halo_-_Combat_Evolved_(XBox_version_-_box_art).jpg',
     trailer: 'https://www.youtube.com/watch?v=v0kHiEME0Vk',
-  },
-  {
-
-    title: 'Mario Kart 8 Deluxe',
-    genre_name: 'Racing',
-    genre_id: 4,
-    publisher: 'Nintendo',
-    platform_name: 'Nintendo Switch',
-    release_year:2014,
-    game_description: 'Mario Kart 8 Deluxe is a racing video game.',
-    features: 'https://en.wikipedia.org/wiki/Mario_Kart_8', 
-    cover_image: '/images/MarioKart8Boxart.jpg',
-    trailer: 'https://www.youtube.com/watch?v=ZKB9FEXhJ68',
   },
   {
    

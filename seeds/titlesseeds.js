@@ -6,12 +6,15 @@ const titlesSeedData = [
 
   { 
      name: 'Games',
+     title_images: '/images/games',
   },
   {
     name: 'Genres',
+    title_images: '/images/genres',
   },
   {
     name: 'Platforms',
+    title_images: '/images/platforms',
   },
 ];
 

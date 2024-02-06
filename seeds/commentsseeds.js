@@ -37,7 +37,7 @@ const commentsSeedData = [
   },
   {
     user_id: 5 ,
-    message: 'I hate this game. I can not tell you count how many times I died :(.',
+    message: 'I hate this game. I can not tell you how many times I died :(.',
   //comment_date: 1706494242592,
     game_name: 'ELDEN RING',
   },

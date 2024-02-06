@@ -7,16 +7,16 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#passwordlogin').value.trim();
   
     if (email && password) {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('.api/users/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {document.location.replace('/');
       } 
-      else {alert(response.statusText);}}};
+      else {alert('something is wrong');}}};
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
   
 //sign in form

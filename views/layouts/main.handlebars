@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style></style>
     <title>GamersHeim</title>
-    <link rel='icon' type='image/x-icon' href='/public/images/favicon.ico'>
+    <link rel='icon' type='image/x-icon' href='/images/favicon.ico'>
 
 </head>
 
@@ -15,34 +15,7 @@
 <body>
 
     
- <header >
-
-    <div class="controllers"> 
-    <p style="left: 0px;  font-size: 32px; color: white; width: 100%;">"WELCOME TO GAMERSHEIM"</p>
-    </div>
-
-    <nav class="navbar" >   
-        
-
-        <a href="/"><button class="gamersheim-button"> Gamersheim </button></a>
-        <a href="/titles"><button class="gamersheim-button"> Titles </button></a>
-        <a href="/platforms"><button class="popular-button"> Platforms </button>   </a>
-        <a href="/genres"><button class="upcoming-button"> Genre </button></a>
-        <a href="/games"><button class="platforms-button"> Games </button> </a>
-        <a href="/comments"><button class="platforms-button"> Comments </button></a>
-        <a href="/adddeletecomment"><button class="platforms-button"> +/- Comment </button></a>
-
-        {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}} 
-   
-    </nav>
-
-
-
-</header>
+    {{>header}}
 
     <div class="gallery ">{{{body}}}</div>
     

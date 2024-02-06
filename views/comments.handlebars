@@ -2,7 +2,7 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
   margin-top: 0;
 }
 
@@ -22,6 +22,7 @@ tr:nth-child(even) {
     <th>Game Title</th>
     <th>Comment</th>
     <th>Action</th>
+    <th>Action 2</th>
 
   </tr>
   {{#each comments as |comment|}}
@@ -29,6 +30,8 @@ tr:nth-child(even) {
     <td>{{game_name}}</td>
     <td>{{message}}</td>
     <td><button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button></td>
+    <td><button class="btn btn-sm btn-warning" data-id="{{project.id}}">UPDATE</button></td>
+
   </tr>
 {{/each}}
 </table>

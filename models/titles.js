@@ -15,6 +15,10 @@ Titles.init(
         type: DataTypes.STRING,
         allowNull: true,
       },
+      title_images: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },      
     },
     {
       sequelize,
@@ -26,3 +30,5 @@ Titles.init(
 );
 
 module.exports = Titles
+
+

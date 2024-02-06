@@ -15,6 +15,10 @@ Genres.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
+      genre_image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },      
     },
     {
         sequelize,
