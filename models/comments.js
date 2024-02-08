@@ -22,15 +22,14 @@ Comments.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-    /*  comment_date: {
-        type: DataTypes.DATE,
+      game_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: get.DATE(),
-      }, */
-      game_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+        references: {
+          model: 'game',
+          key: 'id',
+        }, 
+      }
     },
     {
         sequelize,

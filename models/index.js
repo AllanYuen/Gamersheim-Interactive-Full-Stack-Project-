@@ -6,8 +6,17 @@ const Comments = require('./comments');
 const Titles = require('./titles');
 
 
+  Genres.hasMany(Games, {foreignKey: 'genre_id',onDelete: 'CASCADE',});
+  Games.belongsTo(Genres, {foreignKey: 'genre_id',});
+
+  Platforms.hasMany(Games, {foreignKey: 'platform_id',onDelete: 'CASCADE',});
+  Games.belongsTo(Platforms, {foreignKey: 'platform_id',}); 
+
   Users.hasMany(Comments, {foreignKey: 'user_id',onDelete: 'CASCADE',});
-  Comments.belongsTo(Users, {foreignKey: 'user_id'});
+  Comments.belongsTo(Users, {foreignKey: 'user_id',onDelete: 'CASCADE',});
+
+  Games.hasMany(Comments, {foreignKey: 'game_id',onDelete: 'CASCADE',});
+  Comments.belongsTo(Games, {foreignKey: 'game_id',});  
 
 
 

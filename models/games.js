@@ -22,13 +22,21 @@ Games.init(
       genre_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          model: 'genre',
+          key: 'id',
+        },           
       },
       publisher: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      platform_name: {
-        type: DataTypes.STRING,
+      platform_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'platform',
+          key: 'id',
+        },    
       },
       release_year: {
         type: DataTypes.INTEGER,
