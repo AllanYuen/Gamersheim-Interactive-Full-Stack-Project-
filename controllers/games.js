@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const  {Games} = require('../models');
+const  {Games, Comments } = require('../models');
 
 
 // route to get all 
@@ -13,17 +13,25 @@ router.get('/', async (req, res) => {
 
 // route to get one
 
-router.get('/games/:id', async (req, res) => {
-  try{ 
-      const gamesData = await Games.findByPk(req.params.id);
-      if(!gamesData) {
-          res.status(404).json({message: 'No Game with this id!'});
-          return;
-      }
-      const game = gamesData.get({ plain: true });
-      res.render('game', game);
-    } 
-    catch (err) {res.status(500).json(err);};     
+router.get('/', async (req, res) => {
+  try {
+      const user = await Games.findAll({
+          where : {
+              user_id : req.session.user_id
+          }, include : [{
+              model: Comments
+          }]
+      });
+
+
+      const game = user.map((post) => post.get({ plain: true}));
+          res.render('games', {
+              game 
+          });
+      } catch (err) {
+          console.error(err);
+          res.status(400).json(err);
+  }
 });
 
 module.exports = router;

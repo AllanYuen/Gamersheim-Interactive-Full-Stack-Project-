@@ -1,51 +1,27 @@
 const router = require('express').Router();
-const { Comments }= require('../models');
-const withAuth = require('../utils/auth');
+const { Games, Comments } = require('../models');
 
 
-// route to get all 
-router.get('/',  async (req, res) => {
-  const commentsData = await Comments.findAll().catch((err) => { 
-      res.json(err);
-    });
-      const comments = commentsData.map((comment) => comment.get({ plain: true }));
-      res.render('comments', { comments });
-    });
+router.get('/', async (req, res) => {
+    try {
+        const comment = await Comments.findAll();
 
-
-
-//route to post one
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newComment = await Comments.create({
-      ...req.body,
-      user_id: req.session.id,
-    });
-    res.json(newComment);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+        const allComments = comment.map((comment) => comment.get({ plain: true}));
+            res.render('comments', { allComments, logged_in: req.session.logged_in, });
+    } 
+    catch (err) { console.error(err);res.status(400).json(err);}
 });
 
 
-//route to delete one
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const commentData = await Comments.destroy({
-      where: {
-        comment_id: req.params.id,
-        game_id: req.session.id,
-      },
-    });
-    if (!commentData) {
-      res.status(404).json({ message: '404 Comment not found' });
-      return;
-    }
-    res.status(200).json(commentData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+
+router.get('/:id', async (req, res) => {
+    try {
+        const comment = await Comments.findByPk(req.params.id,{include : [{model: Games,},]});
+
+        const singleComment = comment.get({ plain: true });
+            res.render('comments', {singleComment,});
+    } 
+    catch (err) {console.error(err);res.status(400).json(err);}
 });
+
 module.exports = router;
-
-

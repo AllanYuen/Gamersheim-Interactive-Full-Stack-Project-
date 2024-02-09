@@ -29,6 +29,10 @@ Comments.init(
           model: 'game',
           key: 'id',
         }, 
+      },
+      game_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
       }
     },
     {

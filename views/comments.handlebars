@@ -1,8 +1,14 @@
+
 <style>
+
+#wrapper{
+display: inline-block;
+
+}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
   margin-top: 0;
 }
 
@@ -15,23 +21,75 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.title{
+    color: red;
+    justify-content: center;
+    text-align: center;
+}
 </style>
 
-<table>
-  <tr>
-    <th>Game Title</th>
-    <th>Comment</th>
-    <th>Action</th>
-    <th>Action 2</th>
 
-  </tr>
-  {{#each comments as |comment|}}
-  <tr>
-    <td>{{game_name}}</td>
-    <td>{{message}}</td>
-    <td><button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button></td>
-    <td><button class="btn btn-sm btn-warning" data-id="{{project.id}}">UPDATE</button></td>
+<div id="wrapper">
 
-  </tr>
-{{/each}}
-</table>
+<section class="hero is-primary is-small is-bold">
+    <div class="hero-body">
+        <div class="container" >
+            <h1 class="title" style="text-align:center">Comments Dashboard</h1>
+        </div>
+    </div>
+</section>
+
+<div class="container ">
+    <section class="articles">
+        <div class="column is-8 is-offset-3">
+            <table>
+            <tr>
+                <th>Comment ID</th>
+                <th>Game Title</th>
+                <th>Comment</th>                
+            </tr>
+            {{#each allComments as |comment|}}
+            <tr>
+                <td>{{id}}</td>
+                 <td>{{game_name}}</td>               
+                <td>{{message}}</td>
+            </tr>
+            {{/each}}
+            </table>
+
+
+
+    </section>
+</div>
+
+<section class="hero is-primary is-small is-bold" style="flex-direction: column;">
+    <div class="hero-body">
+        <div class="has-text-right">
+       
+            <label for="games">Choose a game:</label>
+
+            <select id="games" name="games">
+                <option >Age of Empires 4</option>
+                <option >Batman: Arkham knight</option>
+                <option >Bayonetta</option>
+                <option >Dark Souls 3</option>
+                <option >ELDEN RING</option>
+                <option >Grand Theft Auto Trilogy</option>
+                <option >Halo: Combat Evolved</option>
+                <option >Minecraft</option>
+            </select>
+         
+           <button class="button is-primary mt-5" id="add-post">Add Post</button>   
+
+            
+
+        </div>
+            <textarea name="message" rows="10" cols="100"></textarea>             
+    </div>
+</section>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="/js/addcomment.js"></script>
