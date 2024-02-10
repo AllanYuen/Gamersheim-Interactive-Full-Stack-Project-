@@ -36,17 +36,27 @@
 </div>
 </div>
 
+## Screenshots
+![1](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/17a14fc3-356f-464b-ae46-ef8e794f3fa4)
+![2](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/5f39af28-d763-4343-8413-5a7f42c068aa)
+![3](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/8dc2877c-8d12-4e03-b506-7e7b7df85e8a)
+![4](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/0feb1f70-70a3-4eac-a76b-cb97d7ccede5)
+![5](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/b8961323-42ee-4589-9cff-4a8b54254d8c)
+![6](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/d76e8c2a-51db-47c9-820f-41b08aec79e1)
+![7](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/b8614994-1fef-4331-9640-153425586a1c)
+</div>
+</div>
 
 ## Table of Contents
 
 - [Goal of the Project](#Goal-of-the-Project)
+- [Screenshots](#Screenshots)
 - [User Story](#User-Story)
 - [Acceptance Criteria](#Acceptance-Criteria)
 - [Installation](#Installation)
 - [Technology Used](#technology-used)
 - [Reference](#Reference)
 - [License](#license)
-- [Screenshots](#Screenshots)
 - [Collaborators](#Collaborators)
 - [Presentation](#Presentation)
 - [Deployment](#Deployment)
@@ -172,7 +182,7 @@ For details click on the following link to go to the "LICENSE" file:
 ## Presentation
 
 Group 3 Presentation of Project: 
-[Powerpoint](https://docs.google.com/presentation/d/1xnzeLJCSkiQqjjZmUebgKcdLThbfLlPm/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
+[Gamersheim: Presentation](https://docs.google.com/presentation/d/1xnzeLJCSkiQqjjZmUebgKcdLThbfLlPm/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
 
 to address the following: 
 * `Elevator pitch` A one-minute description of your application.
