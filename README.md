@@ -37,7 +37,7 @@
 </div>
 
 ## Screenshots
-![1](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/17a14fc3-356f-464b-ae46-ef8e794f3fa4)
+![1](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/fed10de6-d6ed-4233-8c54-0d435dc2c4a9)
 ![2](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/5f39af28-d763-4343-8413-5a7f42c068aa)
 ![3](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/8dc2877c-8d12-4e03-b506-7e7b7df85e8a)
 ![4](https://github.com/ozdaldogru/Gamersheim-Interactive-Full-Stack-Project-/assets/143357899/0feb1f70-70a3-4eac-a76b-cb97d7ccede5)
@@ -181,8 +181,7 @@ For details click on the following link to go to the "LICENSE" file:
 
 ## Presentation
 
-Group 3 Presentation of Project: 
-[Gamersheim: Presentation](https://docs.google.com/presentation/d/1xnzeLJCSkiQqjjZmUebgKcdLThbfLlPm/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
+[Group 3 Presentation of Project: Gamersheim](https://docs.google.com/presentation/d/1xnzeLJCSkiQqjjZmUebgKcdLThbfLlPm/edit?usp=sharing&ouid=107335282898826746758&rtpof=true&sd=true)
 
 to address the following: 
 * `Elevator pitch` A one-minute description of your application.
